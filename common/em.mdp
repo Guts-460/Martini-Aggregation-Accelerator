@@ -1,0 +1,26 @@
+; minim.mdp
+
+integrator               = steep
+nsteps                   = 50000
+emtol                    = 20.0
+emstep                   = 0.01
+
+nstxout                  = 0
+nstvout                  = 0
+nstfout                  = 0
+nstlog                   = 1000
+nstenergy                = 100
+nstxout-compressed       = 1000
+compressed-x-precision   = 100
+
+cutoff-scheme            = Verlet
+nstlist                  = 1
+pbc                      = xyz
+verlet-buffer-tolerance  = 0.005
+coulombtype              = reaction-field
+rcoulomb                 = 1.1
+epsilon_r                = 15   ; 2.5 (with polarizable water)
+epsilon_rf               = 0
+vdw_type                 = cutoff
+vdw-modifier             = Potential-shift
+rvdw                     = 1.1
