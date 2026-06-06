@@ -6,7 +6,7 @@ Designed for systems where peptides do not spontaneously aggregate under normal 
 
 ---
 
-## 📌 Application Scenarios
+## Application Scenarios
 
 | Scenario | Recommended Workflow |
 |----------|----------------------|
@@ -15,7 +15,7 @@ Designed for systems where peptides do not spontaneously aggregate under normal 
 
 ---
 
-## 🧪 Methodology Overview
+## Methodology Overview
 
 - **System**: 15 F5A peptides (Martini CG)
 - **Simulation length**: 12 × 1 µs steps + final 2 µs equilibration
@@ -27,7 +27,7 @@ Designed for systems where peptides do not spontaneously aggregate under normal 
 
 ---
 
-## 📁 Directory Structure
+## Directory Structure
 
 ```
 .
@@ -50,14 +50,14 @@ Designed for systems where peptides do not spontaneously aggregate under normal 
 
 ---
 
-## ⚙️ Requirements
+## Requirements
 
 - GROMACS ≥ 2022.5  
 - Python 2.7.18 (for `martinize.py`)  
 - Martini force field files  
 - Modules environment (adjust `source /opt/modules-...` paths as needed)
 
-> ⚠️ Check and modify paths in:
+> Check and modify paths in:
 > - `run.sh`
 > - `runequi.sh`
 > - `runsingle.sh`
@@ -65,7 +65,7 @@ Designed for systems where peptides do not spontaneously aggregate under normal 
 
 ---
 
-## 🚀 Execution Instructions
+## Execution Instructions
 
 ### 1. Prepare initial TPR (first 1 µs)
 
@@ -86,7 +86,7 @@ Monitor progress with `tail -f run.log`.
 
 ---
 
-## 🔧 What Each Script Does
+## What Each Script Does
 
 | Script | Function |
 |--------|----------|
@@ -100,7 +100,7 @@ Monitor progress with `tail -f run.log`.
 
 ---
 
-## 📊 Outputs
+## Outputs
 
 - `./1/` to `./12/` – each 1 µs simulation with:
   - `*us.gro`, `*us.xtc`, `*us.tpr`, `em.gro`, `em.top`
@@ -109,7 +109,7 @@ Monitor progress with `tail -f run.log`.
 
 ---
 
-## 🔍 Post‑Processing & Analysis
+## Post‑Processing & Analysis
 
 Use scripts inside `trajs_combine/`:
 
@@ -124,7 +124,7 @@ Energy landscapes can be computed per segment (e.g., using GROMACS `gmx sham`).
 
 ---
 
-## ⚠️ Important Notes
+## Important Notes
 
 - Random water deletion modifies atom counts – scripts automatically update topologies and `.gro` headers.
 - The pipeline assumes:
@@ -135,7 +135,7 @@ Energy landscapes can be computed per segment (e.g., using GROMACS `gmx sham`).
 
 ---
 
-## 📝 Customization
+## Customization
 
 Before running, review:
 
@@ -148,7 +148,7 @@ Before running, review:
 
 ---
 
-## 📖 Citation
+## Citation
 
 If you use this pipeline, please cite:
 
@@ -157,12 +157,8 @@ If you use this pipeline, please cite:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Issues and pull requests are welcome. Please include your GROMACS version and a brief description of your system.
 
 ---
-
-## 📄 License
-
-MIT – use at your own risk. Always validate aggregation behavior with independent simulations.
