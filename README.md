@@ -166,7 +166,3 @@ Issues and pull requests are welcome. Please include your GROMACS version and a 
 ## 📄 License
 
 MIT – use at your own risk. Always validate aggregation behavior with independent simulations.
-
---- 
-
-Let me know if you'd like a shorter version or a badge section (DOI, license, etc.).
